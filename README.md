@@ -24,7 +24,7 @@ File Handling	ASP.NET FileUpload Control
 •Users – Stores user credentials and contact details.
 •Documents – Tracks document names, expiry dates, and uploaded file paths.
 
-1.Getting Started
+⦿Getting Started
 Follow these steps to set up the project locally:
 
 1.Clone the repository:
