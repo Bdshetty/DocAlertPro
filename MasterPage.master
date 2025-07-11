@@ -1,0 +1,184 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head id="Head1" runat="server">
+    <title>DocAlert Pro</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 30px;
+            background: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 20px;
+            color: #4a00e0;
+        }
+
+        .logo i {
+            background: linear-gradient(to right, #4a00e0, #8e2de2);
+            color: white;
+            padding: 8px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .profile-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #4a00e0;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #fff;
+            min-width: 130px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 6px;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f2f2f2;
+        }
+
+        .profile-dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .content {
+            min-height: 80vh;
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: #1e1e1e;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer .footer-content {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            flex-wrap: wrap;
+        }
+
+        .footer h4 {
+            margin-bottom: 10px;
+        }
+
+        .footer i {
+            margin-right: 8px;
+        }
+
+        .footer p, .footer a {
+            color: #ccc;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <form id="Form1" runat="server">
+        <div class="header">
+            <div class="logo">
+                <i class="fa fa-file-alt"></i> DocAlert Pro
+            </div>
+            <div class="nav-links">
+                <a href="Com.aspx">Home</a>
+                <a href="Dashboard.aspx">Dashboard</a>
+                <a href="AddDocument.aspx">Add Document</a>
+            </div>
+            <div class="profile-dropdown">
+                <button class="profile-button">
+                    <i class="fa fa-user"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="Profile.aspx">Profile</a>
+                    <a href="Login.aspx">Logout</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+
+        <div class="footer">
+            <div class="footer-content">
+                <div>
+                    <h4>Contact Us</h4>
+                    <p><a href="tel:+91 636-114-1710"><i class="fa fa-phone"></i> +91 63611 41710</p>
+                    <p><a href="mailto:bhuvandshetty999@gmail.com"><i class="fa fa-envelope"></i> bhuvandshetty999@gmail.com</p>
+                    <p><a href="https://maps.app.goo.gl/nwSoLBe6LXJySiUw6"><i class="fa fa-map-marker-alt" ></i> Mangalore, India</p>
+                </div>
+                <div>
+                    <h4>Follow Us</h4>
+                    <p><a href="https://github.com/Bdshetty"><i class="fa-brands fa-github"></i> GitHub</p>
+                    <p><a href="https://www.instagram.com/b._.d._.s._/"><i class="fab fa-instagram"></i> Instagram</p>
+                    <p><a href="https://www.linkedin.com/in/bhuvandshetty/"><i class="fab fa-linkedin"></i> LinkedIn</p>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025 DocAlert Pro | All rights reserved
+            </div>
+        </div>
+    </form>
+</body>
+</html>
